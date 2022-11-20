@@ -19,8 +19,7 @@ class DetailView(generic.DetailView):
     template_name = 'blog/detail.html'
 
 def new(request):
-    post = get_object_or_404(Post, pk=post_id)
-    return render(request, 'blog/detail.html', {'post': post})
+    return render(request, 'blog/new.html')
 
 def create(request):
     post = get_object_or_404(Post, pk=post_id)
